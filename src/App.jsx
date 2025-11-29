@@ -2,7 +2,13 @@ import './App.css'
 import { Routes, Route, Link } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import SwiperPage from "./pages/SwiperPage";
+import SoundPage from "./pages/SoundPage";
+import VideoPage from "./pages/VideoPage";
 import CalendarPage from "./pages/CalendarPage";
+import AnimationPage from "./pages/AnimationPage";
+import ChartsPage from "./pages/ChartsPage";
+import UtilitiesPage from "./pages/UtilitiesPage";
+import EditorPage from "./pages/EditorPage";
 
 function App() {
   return (
@@ -12,50 +18,54 @@ function App() {
         <h1><em className='font-logo'>js</em><strong className='font-logo-sub'>Library</strong></h1>
         <nav>
           <Link to="/">
-            Main
+            Home
           </Link>
           <Link to="/swiper">
             Slider
           </Link>
-          <Link to="/calendar">
-            Media
+          <Link to="/sound">
+            Sound
+          </Link>
+          <Link to="/video">
+            Video
           </Link>
           <Link to="/calendar">
             Calendar
           </Link>
-          <Link to="/calendar">
+          <Link to="/animation">
             Animation
           </Link>
-          <Link to="/calendar">
-            Gallery
+          <Link to="/charts">
+            Charts
           </Link>
-          <Link to="/calendar">
-            Graphics
-          </Link>
-          <Link to="/calendar">
-            Data Visualization
-          </Link>
-          <Link to="/calendar">
+          <Link to="/utilities">
             Utilities
           </Link>
-          <Link to="/calendar">
+          <Link to="/editor">
             Editor
-          </Link>
-          <Link to="/calendar">
-            Search
           </Link>
         </nav>
       </header>
       
 
       {/* 라우트에 따라 페이지가 바뀌는 영역 */}
-      <div style={{ padding: "20px" }}>
+      <main>
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/swiper" element={<SwiperPage />} />
+          <Route path="/sound" element={<SoundPage />} />
+          <Route path="/video" element={<VideoPage />} />
           <Route path="/calendar" element={<CalendarPage />} />
+          <Route path="/animation" element={<AnimationPage />} />
+          <Route path="/charts" element={<ChartsPage />} />
+          <Route path="/utilities" element={<UtilitiesPage />} />
+          <Route path="/editor" element={<EditorPage />} />
         </Routes>
-      </div>
+      </main>
+
+      <footer>
+        &copy; 서울사이버대학교 인공지능학과 - leekwangwon
+      </footer>
     </div>
   );
 }
